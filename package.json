@@ -1,0 +1,27 @@
+{
+  "name": "aundefinedirbnb",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@heroicons/react": "^1.0.6",
+    "@ramonak/react-progress-bar": "^5.0.3",
+    "autoprefixer": "10.4.14",
+    "date-fns": "^2.30.0",
+    "next": "^13.4.3",
+    "postcss": "8.4.23",
+    "react": "^18.2.0",
+    "react-date-range": "^1.4.0",
+    "react-dom": "^18.2.0",
+    "tailwind-scrollbar-hide": "^1.1.7",
+    "tailwindcss": "3.3.2"
+  },
+  "devDependencies": {
+    "next-router-mock": "^0.9.3"
+  }
+}
