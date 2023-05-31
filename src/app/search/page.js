@@ -6,14 +6,19 @@ import Router from 'next/router';
 import { useRouter } from 'next/navigation';
 import searchjson from '../Components/file3'
 import Infocard from '../Components/infocard';
+import Map from '../Components/Map'
+
+
+
 function page() {
   console.log(searchjson);
    const router=useRouter();
 
+
   return (
     <div>
       <Header/>
-       <main>
+       <main className='grid grid-cols-1 xl:grid-cols-2 '>
         <section className='flex-grow pt-14 px-6 bg-white'>
           <p className='text-xs font-semibold mt-2 mb-6 '> 300+ Stays </p>
           <h1 className='text-3xl font-semibold mt-2 mb-6'>Stays Available</h1>
@@ -22,7 +27,7 @@ function page() {
             <p className='px-4 py-2 border rounded-full hover:shadow-lg active:scale-95 active:bg-gray-100 transition duration-100 ease-out'>Type of Place</p>
             <p className='px-4 py-2 border rounded-full hover:shadow-lg active:scale-95 active:bg-gray-100 ease-out'>Price</p>
             <p className='px-4 py-2 border rounded-full hover:shadow-lg active:scale-95 active:bg-gray-100 ease-out'>Rooms and Beds</p>
-            <p className='px-4 py-2 border rounded-full hover:shadow-lg active:scale-95 active:bg-gray-100 ease-out'>More filters</p>
+            <p className='px-1 py-2 border rounded-full hover:shadow-lg active:scale-95 active:bg-gray-100 ease-out'>More filters</p>
           </div>
 
 
@@ -38,11 +43,21 @@ function page() {
                 price={price}
                 total={total}
                 />
+                <p className='px-4 py-2 border rounded-full hover:shadow-lg active:scale-95 active:bg-gray-100 ease-out bg-red-400 text-center cursor-pointer
+                hover:scale-105 my-3
+                '
+                onClick={()=>router.push("/payement")}
+                >Book Now</p>
           </div>
            
           ))}
         </section>
 
+
+          <section className=' xl:inline-flex xl:min-w-[600px]'>
+           <Map/>
+          </section>
+          
        </main>
       <Footer/>
           

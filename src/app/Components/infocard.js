@@ -5,10 +5,15 @@ function infocard({img,location,title,description,star,price,total}) {
   return (
     <div className='flex py-7 px-2 pr-4 border-b cursor-pointer hover:opacity-80 hover:shadow-lg
     transition duration-200 ease-out first:border-t
+    
+
     '>
        <div className='relative h-24 w-40 md:h-52 md:w-80 flex-shrink-8'>
         
-       <Image className='space-y-4 rounded-2xl' src={img} layout='fill' objectFit='cover'/>
+       <Image className='space-y-4 rounded-2xl
+       hover:scale-105
+       transform transition duration-300 ease-out
+       ' src={img} layout='fill' objectFit='cover'/>
        </div>
 
        <div className='flex flex-col flex-grow pl-5'>
